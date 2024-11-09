@@ -1,0 +1,7 @@
+USE BookMicroservice
+
+CREATE TABLE Book(
+	Id int IDENTITY(1,1) PRIMARY KEY,
+	Title VARCHAR(255) NOT NULL,
+	Author VARCHAR(255) NOT NULL
+);
