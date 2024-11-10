@@ -26,6 +26,7 @@ namespace BookMicroserviceWebAPI.Repository
             var defaultConnection = GetConnectionStrings("DefaultConnection"); 
             using (SqlConnection connection = new SqlConnection(defaultConnection))
             {
+                connection.Open(); 
                 using (SqlCommand cmd = new SqlCommand("SELECT * FROM Book", connection))
                 {
                     using (SqlDataReader reader = cmd.ExecuteReader())
